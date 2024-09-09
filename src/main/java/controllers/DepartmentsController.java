@@ -1,4 +1,4 @@
-package controller;
+package controllers;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -22,9 +22,9 @@ public class DepartmentsController extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Department> departments = repository.getDepartments();
+        List<Department> departments = repository.getAll();
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/departments.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/departments/");
         request.setAttribute("departments", departments);
 
         dispatcher.forward(request, response);

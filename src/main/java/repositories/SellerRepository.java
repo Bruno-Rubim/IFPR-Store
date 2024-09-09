@@ -1,5 +1,4 @@
 package repositories;
-import java.sql.*;
 
 import connection.ConnectionFactory;
 import exceptions.DatabaseException;
@@ -29,7 +28,6 @@ public class SellerRepository {
         try {
 
             Statement statement = connection.createStatement();
-
             ResultSet result = statement.executeQuery("SELECT * FROM seller");
 
             while (result.next()) {
@@ -39,7 +37,10 @@ public class SellerRepository {
                 sellers.add(seller);
 
             }
+
             result.close();
+
+
         } catch (SQLException e) {
 
             throw new RuntimeException(e);
@@ -47,6 +48,7 @@ public class SellerRepository {
         } finally {
             ConnectionFactory.closeConnection();
         }
+
 
         return sellers;
     }
@@ -110,6 +112,35 @@ public class SellerRepository {
             throw new RuntimeException(e.getMessage());
         } finally {
             ConnectionFactory.closeConnection();
+        }
+
+    }
+
+    public void update(Seller seller) {
+
+        String sql = "UPDATE seller SET " +
+                "Name = ?, " +
+                "Email = ?, " +
+                "BirthDate = ?, " +
+                "BaseSalary = ?, " +
+                "DepartmentId = ? " +
+                "WHERE (seller.Id = ?)";
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, seller.getName());
+            statement.setString(2, seller.getEmail());
+            statement.setDate(3, Date.valueOf(seller.getBirthDate()));
+            statement.setDouble(4, seller.getBaseSalary());
+            statement.setInt(5, seller.getDepartment().getId());
+            statement.setInt(6, seller.getId());
+
+            int rowsAffected = statement.executeUpdate();
+
+            System.out.println("Rows affected: " + rowsAffected);
+
+        } catch (SQLException e) {
+            throw new DatabaseException(e.getMessage());
         }
 
     }

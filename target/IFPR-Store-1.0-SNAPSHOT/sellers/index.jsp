@@ -1,9 +1,10 @@
-<%@ page import="java.util.List" %>
 <%@ page import="models.Seller" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Utils.DateUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    List<Seller> sellers = (List<Seller>) request.getAttribute("sellers");
-%>
+
+<% List<Seller> sellers = (List<Seller>) request.getAttribute("sellers"); %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração de Vendedores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
 </head>
 <body class="bg-light">
 
@@ -93,6 +96,9 @@
 
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Vendedores Cadastrados</h1>
+
+                <a class="btn btn-info" href="<%= request.getContextPath() %>/sellers/create">cadastrar</a>
+
             </div>
 
             <!-- Tabela de vendedores -->
@@ -100,7 +106,7 @@
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Id</th>
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Nascimento</th>
@@ -116,17 +122,21 @@
                         <td><%= seller.getId() %></td>
                         <td><%= seller.getName() %></td>
                         <td><%= seller.getEmail() %></td>
-                        <td><%= seller.getBirthDate() %></td>
-                        <td><%= seller.getBaseSalary() %></td>
+                        <td><%= DateUtils.brazilianDateFormat(seller.getBirthDate()) %></td>
+                        <td><%= seller.getBaseSalary()%></td>
                         <td><%= seller.getDepartment() %></td>
-                        <td><a href="sellers/delete?id=<%=seller.getId() %>" class="btn btn-sm btn-primary">Deletar</a></td>
-                        <td><a href="sellers/update?id=<%=seller.getId() %>" class="btn btn-sm btn-primary">Editar</a></td>
+                        <td>
+                            <a href="<%= request.getContextPath() %>/sellers/delete?id=<%= seller.getId() %>" class="btn btn-sm btn-danger">excluir</a>
+                            <a href="<%= request.getContextPath() %>/sellers/update?id=<%= seller.getId() %>" class="btn btn-sm btn-primary">editar</a>
+                        </td>
                     </tr>
                     <% } %>
+
                     <!-- Adicione mais vendedores conforme necessário -->
                     </tbody>
                 </table>
             </div>
+
         </main>
     </div>
 </div>

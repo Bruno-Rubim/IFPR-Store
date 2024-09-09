@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="IFPR-Store:war" />
       <artifact name="IFPR-Store:war exploded" />
     </artifacts-to-build>
   </component>
@@ -9,7 +10,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20ae72df-6061-455d-8bf7-4ba436395e93" name="Changes" comment="" />
+    <list default="true" id="20ae72df-6061-455d-8bf7-4ba436395e93" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DepartmentUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/DepartmentsCreateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/SellersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/SellersUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/departments/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/departments/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/sellers/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/sellers/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DepartmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DepartmentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SellersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SellersCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/DepartmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/SellerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/SellerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sellers-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/departments/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sellers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sellers/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/br/edu/ifpr/foz/ifprstore/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/br/edu/ifpr/foz/ifprstore/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/connection/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/connection/ConnectionFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/controller/DepartmentsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/controller/SellersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/exceptions/DatabaseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/exceptions/DatabaseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/exceptions/DatabaseIntegrityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/exceptions/DatabaseIntegrityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/models/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/models/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/models/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/models/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/repositories/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/repositories/DepartmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/repositories/SellerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/WEB-INF/classes/repositories/SellerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/sellers-create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IFPR-Store-1.0-SNAPSHOT/sellers.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/edu/ifpr/foz/ifprstore/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/edu/ifpr/foz/ifprstore/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connection/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connection/ConnectionFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DepartmentsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/SellersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/DatabaseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exceptions/DatabaseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/DatabaseIntegrityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exceptions/DatabaseIntegrityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Seller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Seller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/DepartmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/SellerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/SellerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/edu/ifpr/foz/ifpr/store/connection/ConnectionFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/edu/ifpr/foz/ifpr/store/connection/ConnectionFactoryTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,49 +95,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat Server.Tomcat 10.1.19.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/brnuo/Documents/tads/web3/projetosJava/IFPR-Store",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.19.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brnuo/Documents/tads/web3/projetosJava/IFPR-Store&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/sellers" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.19" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.19" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="IFPR-Store:war exploded">
+        <artifact name="IFPR-Store:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/IFPR_Store_war_exploded" />
+            <option name="CONTEXT_PATH" value="/IFPR_Store_war" />
           </settings>
         </artifact>
       </deployment>
@@ -173,6 +219,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="IFPR-Store:war exploded" />
+          <artifact name="IFPR-Store:war" />
         </option>
       </method>
     </configuration>
@@ -192,12 +239,28 @@
       <workItem from="1724105968741" duration="8669000" />
       <workItem from="1724672348313" duration="2285000" />
       <workItem from="1724674682727" duration="122000" />
-      <workItem from="1724675284570" duration="376000" />
+      <workItem from="1724675284570" duration="462000" />
+      <workItem from="1724710976220" duration="1502000" />
+      <workItem from="1724712491215" duration="3520000" />
+      <workItem from="1725284094353" duration="3243000" />
+      <workItem from="1725315682442" duration="2128000" />
+      <workItem from="1725882274829" duration="8687000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

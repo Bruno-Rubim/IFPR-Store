@@ -1,9 +1,13 @@
+<%@ page import="models.Seller" %>
 <%@ page import="java.util.List" %>
 <%@ page import="models.Department" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     List<Department> departments = (List<Department>) request.getAttribute("departments");
+    Seller seller = (Seller) request.getAttribute("seller");
 %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração de Vendedores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/dashboard.css">
+
 </head>
 <body class="bg-light">
 
@@ -92,32 +98,58 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
 
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Vendedores Cadastrados</h1>
+                <h1 class="h2">Edição de vendedor</h1>
             </div>
 
-            <!-- Tabela de vendedores -->
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nome</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+            <form action="<%= request.getContextPath() %>/sellers/update" method="post">
 
-                    <% for (Department department : departments) {%>
-                    <tr>
-                        <td><%= department.getId() %></td>
-                        <td><%= department.getName() %></td>
-                        <td><a href="departments/delete?id=<%=department.getId() %>" class="btn btn-sm btn-primary">Deletar</a></td>
-                        <td><a href="departments/update?id=<%=department.getId() %>" class="btn btn-sm btn-primary">Editar</a></td>
-                    </tr>
-                    <% } %>
-                    <!-- Adicione mais vendedores conforme necessário -->
-                    </tbody>
-                </table>
-            </div>
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id: </label>
+                    <input type="text" class="form-control" id="id" name="field_id" value="<%= seller.getId() %>" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome: </label>
+                    <input type="text" class="form-control" id="name" name="field_name" value="<%= seller.getName() %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email: </label>
+                    <input type="email" class="form-control" id="email" name="field_email" placeholder="nome@examplo.com" value="<%= seller.getEmail() %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="birthDate" class="form-label">Data de nascimento: </label>
+                    <input type="date" class="form-control" id="birthDate" name="field_birthDate" value="<%= seller.getBirthDate() %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="baseSalary" class="form-label">Salário base: </label>
+                    <input type="text" class="form-control" id="baseSalary" name="field_baseSalary" value="<%= seller.getBaseSalary() %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="department" class="form-label">Departamento: </label>
+                    <select class="form-select" name="field_department" id="department">
+                        <option selected>Selecione um departamento...</option>
+
+
+                        <% for (Department department: departments) {%>
+
+                        <% String selected = (seller.getDepartment().getId() == department.getId()) ? "selected" : ""; %>
+                        <option <%= selected %> value="<%= department.getId()%>"><%=department.getName() %></option>
+
+                        <% } %>
+
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary btn-sm px-5" type="submit">atualizar</button>
+                </div>
+
+            </form>
+
         </main>
     </div>
 </div>
